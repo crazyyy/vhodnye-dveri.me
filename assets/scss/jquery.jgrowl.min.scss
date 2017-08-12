@@ -1,0 +1,117 @@
+.jGrowl {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 12px;
+
+  position: fixed;
+  z-index: 9999;
+
+  color: #ffffff;
+  &.top-left {
+    top: 0;
+    left: 0;
+  }
+  &.top-right {
+    top: 0;
+    right: 0;
+  }
+  &.bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  &.bottom-right {
+    right: 0;
+    bottom: 0;
+  }
+  &.center {
+    top: 0;
+    left: 25%;
+
+    width: 50%;
+    .jGrowl-closer,
+    .jGrowl-notification {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.jGrowl-notification {
+  display: none;
+  zoom: 1;
+
+  width: 250px;
+  min-height: 40px;
+  margin: 10px;
+  padding: 10px;
+
+  text-align: left;
+
+  opacity: .9;
+  border-radius: 5px;
+  background-color: #000000;
+
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  .ui-state-highlight,
+  .ui-widget-content .ui-state-highlight,
+  .ui-widget-header .ui-state-highlight {
+    color: #ffffff;
+    border: 1px solid #000000;
+    background: #000000;
+  }
+  .jGrowl-header {
+    font-size: .85em;
+    font-weight: 700;
+  }
+  .jGrowl-close {
+    font-size: 1em;
+    font-weight: 700;
+
+    z-index: 99;
+
+    float: right;
+
+    cursor: pointer;
+
+    color: inherit;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.jGrowl-closer {
+  font-size: .9em;
+  font-weight: 700;
+
+  display: none;
+  zoom: 1;
+
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  cursor: pointer;
+  text-align: center;
+
+  opacity: .9;
+  border-radius: 5px;
+  background-color: #000000;
+
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  .ui-state-highlight,
+  .ui-widget-content .ui-state-highlight,
+  .ui-widget-header .ui-state-highlight {
+    color: #ffffff;
+    border: 1px solid #000000;
+    background: #000000;
+  }
+}
+
+@media print {
+  .jGrowl {
+    display: none;
+  }
+}
